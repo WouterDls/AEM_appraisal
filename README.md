@@ -1,7 +1,7 @@
 # AEM_appraisal
-	Airborne EM methods generate enormous datasets for which fast quasi-2/3D inversion methods are prevailing, that may cause erroneous results.
-	Our tool assesses quantitatively interpretable zones from inversion models obtained with 1D (approximate) forward models. 
-	A forced modelling error approach allows the tool to work with an imperfect but computationally cheaper multidimensional modelling. 
+- Airborne EM methods generate enormous datasets for which fast quasi-2/3D inversion methods are prevailing, that may cause erroneous results.
+- Our tool assesses quantitatively interpretable zones from inversion models obtained with 1D (approximate) forward models. 
+- A forced modelling error approach allows the tool to work with an imperfect but computationally cheaper multidimensional modelling. 
  
  ## Contents
  This repository contains
