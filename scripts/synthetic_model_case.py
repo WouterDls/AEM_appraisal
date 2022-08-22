@@ -57,7 +57,7 @@ Perfect Modelling
 """
 
 # Read from file or do core computation
-fromFile = False
+fromFile = True
 
 if fromFile:
     N = np.loadtxt('data and simulations/synthetic_weighted_sensitivity_perfect.txt')
@@ -79,7 +79,7 @@ Imperfect Modelling
 """
 
 # Read from file or do core computation
-fromFile = False
+fromFile = True
 
 if fromFile:
     N = np.loadtxt('data and simulations/synthetic_weighted_sensitivity_imperfect.txt')

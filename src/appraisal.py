@@ -25,7 +25,7 @@ def compute_denominator(save=False, case='synthetic'):
                                    sensitivity_path=sensitivity_path)
 
     if save:
-        np.save('data and simulations/' + case + '_total_sensitivity.txt', sensitivity)
+        np.savetxt('data and simulations/' + case + '_total_sensitivity.txt', sensitivity)
     return sensitivity
 
 
@@ -39,7 +39,7 @@ def compute_numerator(dobs_square, dpred_2D_square, rel_err, save=False, case='s
     sensitivity = core_computation(EPSILON=EPSILON, meshEC_generator=meshEC_generator,
                                    sensitivity_path=sensitivity_path)
     if save:
-        np.save('data and simulations/' + case + '_weighted_sensitivity' + modelling + '.txt', sensitivity)
+        np.savetxt('data and simulations/' + case + '_weighted_sensitivity_' + modelling + '.txt', sensitivity)
     return sensitivity
 
 
@@ -59,10 +59,10 @@ def core_computation(EPSILON, meshEC_generator, sensitivity_path):
                 J = np.loadtxt(
                     sensitivity_path + '_J_HM_sounding_' + str(sounding))
                 mapping_sensitivity_to_model = maps.Mesh2Mesh([meshEC, Jmesh_HM_2D])
-                sensitivity = sensitivity + np.abs(mapping_sensitivity_to_model * J[:, t - 18]) * EPSILON[sounding, t]
+                sensitivity = sensitivity + np.abs(mapping_sensitivity_to_model * J[:, t - 18] * EPSILON[sounding, t])
             if t < 18:
                 J = np.loadtxt(
                     sensitivity_path + '_J_LM_sounding_' + str(sounding))
                 mapping_sensitivity_to_model = maps.Mesh2Mesh([meshEC, Jmesh_LM_2D])
-                sensitivity = sensitivity + np.abs(mapping_sensitivity_to_model * J[:, t]) * EPSILON[sounding, t]
+                sensitivity = sensitivity + np.abs(mapping_sensitivity_to_model * J[:, t] * EPSILON[sounding, t])
     return sensitivity
