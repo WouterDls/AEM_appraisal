@@ -60,7 +60,7 @@ if fromFile:
     N = np.loadtxt('data and simulations/field_weighted_sensitivity_perfect.txt')
     D = np.loadtxt('data and simulations/field_total_sensitivity.txt')
 else:
-    N = appraisal.compute_nominator(dobs_square, dpred_2D_square,rel_err_square, save=False, case='field',modelling='perfect')
+    N = appraisal.compute_numerator(dobs_square, dpred_2D_square,rel_err_square, save=False, case='field',modelling='perfect')
     D = appraisal.compute_denominator(save=False, case='field')
 
 
@@ -82,7 +82,7 @@ if fromFile:
     N = np.loadtxt('data and simulations/field_weighted_sensitivity_imperfect.txt')
     D = np.loadtxt('data and simulations/field_total_sensitivity.txt')
 else:
-    N = appraisal.compute_nominator(dobs_square, dpred_2D_square,rel_err_square, save=False, case='synthetic',modelling='imperfect')
+    N = appraisal.compute_numerator(dobs_square, dpred_2D_square,rel_err_square, save=False, case='synthetic',modelling='imperfect')
     D = appraisal.compute_denominator(save=False, case='field')
 
 

@@ -57,13 +57,13 @@ Perfect Modelling
 """
 
 # Read from file or do core computation
-fromFile = True
+fromFile = False
 
 if fromFile:
     N = np.loadtxt('data and simulations/synthetic_weighted_sensitivity_perfect.txt')
     D = np.loadtxt('data and simulations/synthetic_total_sensitivity.txt')
 else:
-    N = appraisal.compute_nominator(dobs_square, dpred_2D_square,rel_err_square, save=False, case='synthetic',modelling='perfect')
+    N = appraisal.compute_numerator(dobs_square, dpred_2D_square,rel_err_square, save=False, case='synthetic',modelling='perfect')
     D = appraisal.compute_denominator(save=False, case='synthetic')
 
 
@@ -85,7 +85,7 @@ if fromFile:
     N = np.loadtxt('data and simulations/synthetic_weighted_sensitivity_imperfect.txt')
     D = np.loadtxt('data and simulations/synthetic_total_sensitivity.txt')
 else:
-    N = appraisal.compute_nominator(dpred_1D_imperfect_square, dpred_2D_imperfect_square,rel_err_square, save=False, case='synthetic',modelling='imperfect')
+    N = appraisal.compute_numerator(dpred_1D_imperfect_square, dpred_2D_imperfect_square,rel_err_square, save=False, case='synthetic',modelling='imperfect')
     D = appraisal.compute_denominator(save=False, case='synthetic')
 
 
