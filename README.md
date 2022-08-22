@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/527564756.svg)](https://zenodo.org/badge/latestdoi/527564756)
+
 # AEM_appraisal
 - Airborne EM methods generate enormous datasets for which fast quasi-2/3D inversion methods are prevailing, that may cause erroneous results.
 - Our tool assesses quantitatively interpretable zones from inversion models obtained with 1D (approximate) forward models. 
