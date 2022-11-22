@@ -1,11 +1,20 @@
 [![DOI](https://zenodo.org/badge/527564756.svg)](https://zenodo.org/badge/latestdoi/527564756)
 
-# AEM_appraisal
+# The code AEM_appraisal in short
 - Airborne EM methods generate enormous datasets for which fast quasi-2/3D inversion methods are prevailing, that may cause erroneous results.
 - Our tool assesses quantitatively interpretable zones from inversion models obtained with 1D (approximate) forward models. 
 - A forced modelling error approach allows the tool to work with an imperfect but computationally cheaper multidimensional modelling. 
+
+## Summary
+This code was used to create an appraisal tool which detects multidimensionality issues in Airborne EM inversion in which a 1D forward model was used. The results are published in Remote Sensing
+
+Deleersnyder, W., Dudal, D., & Hermans, T. (2022). Novel Airborne EM Image Appraisal Tool for Imperfect Forward Modeling. Remote Sensing, 14(22), 5757. DOI: https://doi.org/10.3390/rs14225757
+
+Abstract:
+
+Full 3D inversion of time-domain Airborne ElectroMagnetic (AEM) data requires specialists’ expertise and a tremendous amount of computational resources, not readily available to everyone. Consequently, quasi-2D/3D inversion methods are prevailing, using a much faster but approximate (1D) forward model. We propose an appraisal tool that indicates zones in the inversion model that are not in agreement with the multidimensional data and therefore, should not be interpreted quantitatively. The image appraisal relies on multidimensional forward modeling to compute a so-called normalized gradient. Large values in that gradient indicate model parameters that do not fit the true multidimensionality of the observed data well and should not be interpreted quantitatively. An alternative approach is proposed to account for imperfect forward modeling, such that the appraisal tool is computationally inexpensive. The method is demonstrated on an AEM survey in a salinization context, revealing possible problematic zones in the estimated fresh–saltwater interface.
  
- ## Contents
+ ## Contents of the code
  This repository contains
  1. data and simulations: data, recoverd/inversion models from quasi-2D inversion, results from simulation scripts, intermediate results (so that they do not to be re-computed each time)
  2. scripts: those scripts generate the normalised gradient for the synthetic and field data case (for perfect and imperfect modelling)
