@@ -5,6 +5,11 @@
 - Our tool assesses quantitatively interpretable zones from inversion models obtained with 1D (approximate) forward models. 
 - A forced modelling error approach allows the tool to work with an imperfect but computationally cheaper multidimensional modelling. 
 
+For example, the following recovered model was obtained with a 1D forward model on Airborne EM data
+![alt text](https://github.com/WouterDls/AEM_appraisal/blob/main/fieldcase_recovered_model.png)
+Applying the appraisal method results in blanked out area's from the model that do not fit the multidimensionality of the data well.
+![alt text](https://github.com/WouterDls/AEM_appraisal/blob/main/field_appraisal_imperfect.pdf)
+
 ## Summary
 This code was used to create an appraisal tool which detects multidimensionality issues in Airborne EM inversion in which a 1D forward model was used. The results are published in Remote Sensing
 
